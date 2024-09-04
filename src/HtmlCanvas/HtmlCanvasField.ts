@@ -37,8 +37,8 @@ export class HtmlCanvasField extends GameField implements IField {
         );
         this.textureIdArray = new Uint8Array(maxDrawColCount * maxDrawRowCount);
 
-        const uiTextureDark = await createHtmlCanvasTexture("assets/textures/field_atlas_dark.png");
-        const uiTextureLight = await createHtmlCanvasTexture("assets/textures/field_atlas_light.png");
+        const uiTextureDark = await createHtmlCanvasTexture("./assets/textures/field_atlas_dark.png");
+        const uiTextureLight = await createHtmlCanvasTexture("./assets/textures/field_atlas_light.png");
 
         this.drawData = {
             uiTextureDark,

@@ -313,7 +313,7 @@ export class WebGpuUi extends GameUi implements IUi {
             mipmapFilter: "nearest",
         });
 
-        const uiTextureDark = await createWebGpuTexture(this.device, "assets/textures/field_atlas_dark.png");
+        const uiTextureDark = await createWebGpuTexture(this.device, "./assets/textures/field_atlas_dark.png");
         const uiTextureUniformBindGroupDark = this.device.createBindGroup({
             layout: pipeline.getBindGroupLayout(0),
             entries: [
@@ -322,7 +322,7 @@ export class WebGpuUi extends GameUi implements IUi {
             ],
         });
 
-        const uiTextureLight = await createWebGpuTexture(this.device, "assets/textures/field_atlas_light.png");
+        const uiTextureLight = await createWebGpuTexture(this.device, "./assets/textures/field_atlas_light.png");
         const uiTextureUniformBindGroupLight = this.device.createBindGroup({
             layout: pipeline.getBindGroupLayout(0),
             entries: [

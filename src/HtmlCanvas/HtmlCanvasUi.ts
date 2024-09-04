@@ -75,8 +75,8 @@ export class HtmlCanvasUi extends GameUi implements IUi {
 
         this.context = gHtmlCanvasInstance.getContext();
 
-        const uiTextureDark = await createHtmlCanvasTexture("assets/textures/field_atlas_dark.png");
-        const uiTextureLight = await createHtmlCanvasTexture("assets/textures/field_atlas_light.png");
+        const uiTextureDark = await createHtmlCanvasTexture("./assets/textures/field_atlas_dark.png");
+        const uiTextureLight = await createHtmlCanvasTexture("./assets/textures/field_atlas_light.png");
 
         this.drawData = {
             uiTextureDark,

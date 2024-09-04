@@ -19,8 +19,8 @@ import { detectColorScheme, getTheme } from "Theme";
 import "./styles.css";
 import { IUiConstructor } from "Game/IUi";
 
-const THEME_DARK_ICON = "assets/img/theme_dark.png";
-const THEME_LIGHT_ICON = "assets/img/theme_light.png";
+const THEME_DARK_ICON = "./assets/img/theme_dark.png";
+const THEME_LIGHT_ICON = "./assets/img/theme_light.png";
 
 let InstanceType: IRendererInstanceConstructor = WebGpuInstance;
 let FieldType: IFieldConstructor = WebGpuField;

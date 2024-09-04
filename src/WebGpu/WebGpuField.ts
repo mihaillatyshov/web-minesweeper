@@ -223,7 +223,7 @@ export class WebGpuField extends GameField implements IField {
             mipmapFilter: "nearest",
         });
 
-        const fieldTextureDark = await createWebGpuTexture(this.device, "assets/textures/field_atlas_dark.png");
+        const fieldTextureDark = await createWebGpuTexture(this.device, "./assets/textures/field_atlas_dark.png");
         const fieldTextureUniformBindGroupDark = this.device.createBindGroup({
             layout: pipeline.getBindGroupLayout(0),
             entries: [
@@ -232,7 +232,7 @@ export class WebGpuField extends GameField implements IField {
             ],
         });
 
-        const fieldTextureLight = await createWebGpuTexture(this.device, "assets/textures/field_atlas_light.png");
+        const fieldTextureLight = await createWebGpuTexture(this.device, "./assets/textures/field_atlas_light.png");
         const fieldTextureUniformBindGroupLight = this.device.createBindGroup({
             layout: pipeline.getBindGroupLayout(0),
             entries: [
