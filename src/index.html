@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LM - Minesweeper</title>
+    </head>
+    <body>
+        <div id="nav">
+            <form class="nav-inputs" id="form-field">
+                <p class="form-field">
+                    <label for="field-cols">Cols:</label>
+                    <input type="number" min="9" max="10000" step="1" value="9" name="cols" id="field-cols" />
+                </p>
+                <p class="form-field">
+                    <label for="field-rows">Rows:</label>
+                    <input type="number" min="9" max="10000" step="1" value="9" name="rows" id="field-rows" />
+                </p>
+                <p class="form-field">
+                    <label for="field-mines">Mines:</label>
+                    <input type="number" min="2" max="99999999" step="1" value="10" name="mines" id="field-mines" />
+                </p>
+                <input type="submit" value="New Game" id="new-game" />
+            </form>
+            <div class="nav-inputs">
+                <input type="button" value="Start Beginner" id="new-game-beginner" />
+                <input type="button" value="Start Intermediate" id="new-game-intermediate" />
+                <input type="button" value="Start Expert" id="new-game-expert" />
+            </div>
+            <div class="nav-inputs">
+                <input type="button" value="Load Game" id="load-game" />
+                <input type="button" value="Save Game" id="save-game" />
+            </div>
+        </div>
+        <div class="text-danger" id="error-message"></div>
+        <canvas id="app"></canvas>
+        <label id="theme-switch" class="theme-switch" for="checkbox-theme">
+            <img src="assets/img/theme_light.png" alt="Theme" width="40px" />
+            <input type="checkbox" id="checkbox-theme" />
+        </label>
+    </body>
+</html>

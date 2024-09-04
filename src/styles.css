@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-color: #333;
+    --bg-color: #f8f9fa;
+}
+
+[data-theme="dark"] {
+    --font-color: #fff;
+    --bg-color: #343a40;
+}
+
+body {
+    padding: 16px;
+    height: 100vh;
+    height: 100dvh;
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+#theme-switch {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+#checkbox-theme {
+    display: none;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+#app {
+    margin: 0 auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: end;
+    margin: 0 auto;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"]:disabled {
+    background-color: #9cccff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.text-danger {
+    color: red;
+}
+
+#error-message {
+    font-size: 24px;
+}

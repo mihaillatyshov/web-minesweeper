@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "noEmit": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "baseUrl": "./src",
+        "module": "esnext",
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "noFallthroughCasesInSwitch": true,
+        "paths": {
+            "@config": ["config.default.js"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    },
+    "include": [
+        "./src/**/*",
+        "node_modules/@webgpu/types/**/*"
+    ]
+}
+
