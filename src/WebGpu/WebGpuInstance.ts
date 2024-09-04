@@ -15,6 +15,8 @@ export class WebGpuInstance implements IRendererInstance {
     async init(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
 
+        console.log("WebGPU init");
+
         try {
             const instance = navigator.gpu;
             if (!instance) {

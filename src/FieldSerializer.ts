@@ -1,6 +1,18 @@
 import { GameLogic } from "Game/GameLogic";
 
-let loadData: any = null;
+type TRendererType = "canvas" | "webgpu";
+
+export const getRendererType = () => {
+    const rendererType = localStorage.getItem("rendererType") as TRendererType | null;
+    return rendererType || "canvas";
+};
+
+export const switchRendererType = () => {
+    const rendererType = getRendererType();
+    const newRendererType = rendererType === "canvas" ? "webgpu" : "canvas";
+    localStorage.setItem("rendererType", newRendererType);
+    window.location.reload();
+};
 
 export const getStartupInputs = () => {
     const params = new URLSearchParams(window.location.search);

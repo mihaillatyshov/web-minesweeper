@@ -58,6 +58,11 @@ body {
     margin: 0 auto;
 }
 
+.renderer-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
 input {
     padding: 8px;
     border: 1px solid #ccc;

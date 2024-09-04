@@ -4,7 +4,7 @@ import { calcCanvasSize } from "Game/Utils";
 import { IRendererInstanceConstructor } from "Game/IRendererInstance";
 import { IFieldConstructor } from "Game/IField";
 
-import { GameDataBase, getStartupInputs, startNewGame } from "FieldSerializer";
+import { GameDataBase, getRendererType, getStartupInputs, startNewGame, switchRendererType } from "FieldSerializer";
 
 import { WebGpuInstance } from "WebGpu/WebGpuInstance";
 import { WebGpuField } from "WebGpu/WebGpuField";
@@ -22,15 +22,25 @@ import { IUiConstructor } from "Game/IUi";
 const THEME_DARK_ICON = "./assets/img/theme_dark.png";
 const THEME_LIGHT_ICON = "./assets/img/theme_light.png";
 
-let InstanceType: IRendererInstanceConstructor = WebGpuInstance;
-let FieldType: IFieldConstructor = WebGpuField;
-let UiType: IUiConstructor = WebGpuUi;
+let InstanceType: IRendererInstanceConstructor = HtmlCanvasInstance;
+let FieldType: IFieldConstructor = HtmlCanvasField;
+let UiType: IUiConstructor = HtmlCanvasUi;
 
-if (true) {
-    InstanceType = HtmlCanvasInstance;
-    FieldType = HtmlCanvasField;
-    UiType = HtmlCanvasUi;
+const rendererType = getRendererType();
+
+if (rendererType === "webgpu") {
+    InstanceType = WebGpuInstance;
+    FieldType = WebGpuField;
+    UiType = WebGpuUi;
+
+    document.getElementById("renderer-text")!.innerHTML = "WebGPU";
+} else {
+    document.getElementById("renderer-text")!.innerHTML = "Canvas";
 }
+
+document.getElementById("renderer-switch")?.addEventListener("click", () => {
+    switchRendererType();
+});
 
 detectColorScheme();
 
