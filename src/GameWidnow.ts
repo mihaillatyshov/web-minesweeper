@@ -41,7 +41,7 @@ export class GameWindow {
         canvas.addEventListener("wheel", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            const x = e.shiftKey ? -e.deltaY : e.deltaX;
+            const x = e.shiftKey ? -e.deltaY : -e.deltaX;
             const y = e.shiftKey ? e.deltaX : e.deltaY;
             this.onWheel && this.onWheel(x, y);
         });
